@@ -1,0 +1,19 @@
+<td-layout class="layout-card-over-demo" sidenavWidth="280px">
+  <td-layout-nav navigationRoute="/">
+    <td-layout-card-over>
+      <div class="container">
+        <div class="left-half-logo" fxHide.lt-md="true">
+          <img src="../../../assets/img/stagia.svg" class="logo-bg" />
+        </div>
+        <div class="content">
+          <div class="subheader" *ngIf="childData?.subheader">
+            <span>{{ childData?.subheader }}</span>
+          </div>
+          <div class=".child-content">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </td-layout-card-over>
+  </td-layout-nav>
+</td-layout>

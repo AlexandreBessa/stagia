@@ -1,0 +1,32 @@
+<form class="register-widget-form" [formGroup]="registerForm">
+
+  <mat-form-field appearance="standard">
+    <mat-label>Vaga</mat-label>
+    <input matInput type="text" class="input" formControlName="name" required="true">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Empresa</mat-label>
+    <input type="text" matInput  [matAutocomplete]="auto" formControlName="company">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Requisitos</mat-label>
+    <input matInput type="text" class="input" formControlName="requirements" required="true">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Salário</mat-label>
+    <input matInput type="text" class="input" formControlName="salary" mask="0.000,00" required="true">
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput type="Textarea" class="input" formControlName="description" required="true"></textarea>
+  </mat-form-field>
+  <div fxLayout="row" class="buttons-row ">
+    <app-action-button [isLoading]="isLoading" (onAction)="send()" [disabled]="!registerForm.valid">Salvar
+    </app-action-button>
+    <button mat-raised-button color="warn" class="action" (click)="cancel()">Cancelar</button>
+  </div>
+</form>

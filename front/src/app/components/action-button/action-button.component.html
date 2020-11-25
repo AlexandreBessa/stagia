@@ -1,0 +1,7 @@
+<button mat-raised-button color="accent" (click)="doAction($event)" *ngIf="!isLoading">
+  <ng-content></ng-content>
+</button>
+<button mat-raised-button *ngIf="isLoading">
+  <mat-progress-spinner color="accent" diameter="30" mode="indeterminate">
+  </mat-progress-spinner>
+</button>

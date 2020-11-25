@@ -1,0 +1,54 @@
+@import "../../../styles.scss";
+
+.main-page-content {
+  padding: 0 10%;
+}
+
+::ng-deep.td-layout-card-over {
+  max-width: 90% !important;
+}
+
+.img-logo-isotercas {
+  padding: 20% 0% 20% 2%;
+  width: 100%;
+  background-color: #ffffff;
+  align-items: center;
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep.mat-drawer-inner-container {
+  background-color: #1a237e;
+}
+
+::ng-deep.mat-list-item-content {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #ffffff;
+}
+
+::ng-deep.mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  color: #a4afb7;
+}
+
+::ng-deep.mat-toolbar.mat-toolbar.td-nagivation-drawer-toolbar.mat-toolbar-single-row {
+  padding: 0px;
+}
+
+::ng-deep.mat-toolbar.mat-toolbar.td-layout-toolbar.mat-primary.mat-toolbar-single-row {
+  background-color: #ffffff;
+}
+
+.user-data-menu {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  color: #73818f;
+}
+
+.version {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}

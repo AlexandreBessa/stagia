@@ -1,0 +1,8 @@
+<app-main-page>
+  <div class="title" *ngIf="childData?.subheader">
+      <h2>{{childData?.subheader}}</h2>
+  </div>
+  <!-- <div [@tdFadeInOut]="{ value: showAnimation, params: { duration: 3000 }}"> -->
+      <router-outlet #outlet="outlet"></router-outlet>
+  <!-- </div> -->
+</app-main-page>

@@ -1,0 +1,47 @@
+<form class="register-widget-form" [formGroup]="registerForm">
+  <mat-form-field appearance="standard">
+    <mat-label>Nome da Empresa</mat-label>
+    <input
+      matInput
+      type="text"
+      class="input"
+      formControlName="name"
+      required="true"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>CNPJ</mat-label>
+    <input
+      matInput
+      type="text"
+      class="input"
+      formControlName="cnpj"
+      mask="00.000.000/0000-00"
+      required="true"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Telefone</mat-label>
+    <input
+      matInput
+      type="text"
+      class="input"
+      formControlName="phone"
+      mask="(00) 0000-0000"
+      required="true"
+    />
+  </mat-form-field>
+  <div
+    fxLayout="column"
+    fxLayoutAlign="space-between center"
+    class="action-buttons"
+  >
+    <app-action-button
+      [isLoading]="isLoading"
+      (onAction)="send()"
+      [disabled]="!registerForm.valid"
+    >
+      Cadastrar Empresa
+    </app-action-button>
+  </div>
+</form>

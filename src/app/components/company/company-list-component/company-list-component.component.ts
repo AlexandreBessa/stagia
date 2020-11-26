@@ -7,7 +7,7 @@ import { CompanyService } from 'src/app/shared/services/company.service';
   styleUrls: ['./company-list-component.component.scss'],
 })
 export class CompanyListComponentComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'cnpj', 'phone'];
+  displayedColumns: string[] = [ 'name', 'cnpj', 'phone'];
   dados: any;
 
   constructor(private service: CompanyService) {}
